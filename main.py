@@ -44,7 +44,7 @@ def get_paragraphs_text(path):
     paragraphs_text = paragraphs_text.replace('\n', '；').replace(' ', '').replace('\t', '')
     return cell_text, paragraphs_text
 
-with open('resumes.json', "r", encoding="utf-8") as f1, open('unlabeled_data.txt', "a", encoding='utf-8') as f2:
+with open('/resume_train/train.json', "r", encoding="utf-8") as f1, open('unlabeled_data.txt', "a", encoding='utf-8') as f2:
     raw_examples = json.loads(f1.read())
     label_list = []    
     line_num = 1
